@@ -8,6 +8,8 @@ int main() {
 
 	renderer.init();
 
+	renderer.setWindowIcon("res/star.png");
+
 	GLFWwindow* rawWindow = renderer.getWindow();
 	
 	interface.initInterface(rawWindow);

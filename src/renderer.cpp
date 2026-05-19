@@ -39,3 +39,20 @@ void Renderer::swapBuffers() {
 void Renderer::pollEvents() {
 	glfwPollEvents();
 }
+
+void Renderer::setWindowIcon(const char* filepath) {
+	GLFWimage images[1]; 
+	int channels;
+	
+	images[0].pixels = stbi_load(filepath, &images[0].width, &images[0].height, &channels, 4);
+
+	if (images[0].pixels) {
+	
+		glfwSetWindowIcon(window, 1, images);
+
+		stbi_image_free(images[0].pixels);
+	}
+	else {
+		std::cout << "Failed to load window icon from: " << filepath << std::endl;
+	}
+}

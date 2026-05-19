@@ -4,6 +4,8 @@
 #include <GLFW/glfw3.h>
 #include <iostream>
 
+#include "stb_image.h"
+
 class Renderer {
 public:
 
@@ -14,6 +16,7 @@ public:
 	void clean();
 
 	GLFWwindow* getWindow();
+	void setWindowIcon(const char* filepath);
 
 private:
 

@@ -24,7 +24,7 @@ add_executable (CrystalGraph
     "libs/imgui/backends/imgui_impl_glfw.cpp"
     "libs/imgui/backends/imgui_impl_opengl3.cpp"
     "libs/stb_image_write.h"
- "src/interface.cpp" "src/interface.h" "src/shader.h")
+ "src/interface.cpp" "src/interface.h" "src/shader.h" "src/defines/stb_define.cpp")
 
 target_include_directories(CrystalGraph PRIVATE 
     libs/glfw/include
