@@ -9,8 +9,16 @@ void Interface::initInterface(GLFWwindow* window) {
 void Interface::drawFrame() {
 	ImGui_ImplOpenGL3_NewFrame();
 	ImGui_ImplGlfw_NewFrame();
-	ImGui::NewFrame();
+    ImGui::NewFrame();
+
+    ImGuiViewport* viewport = ImGui::GetMainViewport();
+    ImGui::SetNextWindowPos(viewport->WorkPos, ImGuiCond_Always);
+    ImGuiWindowFlags flags = 0;
+    flags |= ImGuiWindowFlags_NoMove;
+    flags |= ImGuiWindowFlags_NoCollapse;
+
 	ImGui::Begin("crystalGraph");
+
 	ImGui::End();
 }
 
